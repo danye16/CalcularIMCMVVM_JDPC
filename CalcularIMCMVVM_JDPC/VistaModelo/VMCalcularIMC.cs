@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace CalcularIMCMVVM_JDPC.VistaModelo
 {
-    public class VMCalcularIMC : BaseViewModel
+     class VMCalcularIMC : BaseViewModel
     {
         #region VARIABLES
         string _Mensaje;
@@ -54,7 +54,7 @@ namespace CalcularIMCMVVM_JDPC.VistaModelo
             IMC= (p) /(Math.Pow(a, 2));
         }
 
-        public void BTNCalcularIMC()
+        public async void BTNCalcularIMC()
         {
             CalcularIMC(Peso, Altura);
             //Declarar variable y asignarle valor
@@ -85,12 +85,12 @@ namespace CalcularIMCMVVM_JDPC.VistaModelo
                 Mensaje = "Tienes obesidad, deja la coca";
             }
 
-            DisplayAlert("Resultado ", Mensaje, "Quitar");
+           await DisplayAlert("Estado ", Mensaje, "Quitar");
         }
         #endregion
         #region COMMANDOS
         public ICommand ProcesoAsyncommand => new Command(async () => await ProcesoAsyncrono());
-        public ICommand ProcesoSimpleAsync => new Command(BTNCalcularIMC);
+        public ICommand CalcularIMCCommand => new Command(BTNCalcularIMC);
         #endregion
     }
 }

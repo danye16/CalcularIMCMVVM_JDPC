@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CalcularIMCMVVM_JDPC;
+using CalcularIMCMVVM_JDPC.VistaModelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +17,8 @@ namespace CalcularIMCMVVM_JDPC.Vista
         public VCalcularImc()
         {
             InitializeComponent();
+            BindingContext = new VMCalcularIMC(Navigation);
         }
+
     }
 }

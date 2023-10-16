@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CalcularIMCMVVM_JDPC.Vista;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace CalcularIMCMVVM_JDPC
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new VCalcularImc();
         }
 
         protected override void OnStart()

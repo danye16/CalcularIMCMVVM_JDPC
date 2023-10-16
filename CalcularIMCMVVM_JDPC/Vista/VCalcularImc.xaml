@@ -18,13 +18,13 @@
         <Grid>
             <Label  Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center"  Text="Peso"/>
 
-            <Entry Grid.Column="1" Grid.Row="0" Margin="-30,0,0,0"  Placeholder="Peso" Keyboard="Numeric" x:Name="Peso"/>
+            <Entry Grid.Column="1" Grid.Row="0" Margin="-30,0,0,0"  Placeholder="Peso" Keyboard="Numeric" Text="{Binding Peso}" />
             <Label  Grid.Column="0" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" Text="Altura"/>
 
-            <Entry Grid.Column="1" Grid.Row="1" Margin="-30,0,0,0" Placeholder="Altura" Keyboard="Numeric" x:Name="Altura"/>
-            <Entry  Grid.Column="0" Grid.Row="2" HorizontalTextAlignment="Center"  Margin="-80,0,0,80" Placeholder="IMC" IsEnabled="False" x:Name="IMC"  Grid.ColumnSpan="2" />
+            <Entry Grid.Column="1" Grid.Row="1" Margin="-30,0,0,0" Placeholder="Altura" Keyboard="Numeric" Text="{Binding Altura}" />
+            <Entry  Grid.Column="0" Grid.Row="2" HorizontalTextAlignment="Center"  Margin="-80,0,0,80" Placeholder="IMC" IsEnabled="False" Text="{Binding IMC}"  Grid.ColumnSpan="2" />
         </Grid>
-        <Button CornerRadius="7" StyleClass="calcular" HorizontalOptions="Center"    Text="Calcular IMC" Clicked="Button_Clicked"/>
+        <Button CornerRadius="7" StyleClass="calcular" HorizontalOptions="Center"    Text="Calcular IMC" Command="{Binding CalcularIMCCommand}" />
 
     </StackLayout>
 </ContentPage>
